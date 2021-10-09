@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            height: 100%;
+            background-image: url(5555.jpg);
+            height: 100vh;
+            background-size: contain;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 30px;
+            text-align: center;
+            color: rgb(212, 69, 205);
+        }
+        .login_btn{
+            width: 100px;
+            padding: 8px 0;
+            outline: none;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            background: transparent;
+            color: #fff;
+            float: right;
+        }
+        .header h1{
+            padding-top: 200px;
+            padding-bottom: 0;
+            font-size: 60px;
+        }
+        .header p{
+            margin: 20px 0;
+        }
+        .input-group{
+            width: 90%;
+            max-width: 500px;
+            border-radius: 30px;
+            background: #fff;
+            margin: auto;
+            padding: 2px;
+        }
+        .form-control{
+            border: 0;
+            border-radius: 30px 0 0 30px;
+            margin: 2px;
+            box-shadow: none;
+        }
+        .input-group-text{
+            width: 100px;
+            background-image: linear-gradient(#00ff7e,#1f3d90);
+            border: 0;
+            color:#fff;
+            padding: 0 25px;
+            border-radius: 30px;
+            box-shadow: none;
+        }
+        .features{
+            padding: 100px 0;
+
+        }
+        h1{
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .features-img img{
+           width: 100%;
+        }
+        .prize{
+            width: 50px;
+            height: 50px;
+            background: #ff5722;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 0 10px 1px rgba(37,73,214,0.18);
+            position: absolute;
+            left: 20px;
+            bottom: -25px;
+        }
+        .features-img{
+            position: relative;
+        }
+       .rating{
+            padding: 3px;
+            float: right;
+            background: #fff;
+            bottom: -1px;
+            right: 0;
+            position: absolute;
+        }
+        .features .fa{
+             font-size: 15px;
+             color: orange;
+        }
+        .feature-details{
+            padding: 20px;
+            text-align: justify;
+        }
+        .feature-details h4{
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        .feature-details .fa{
+           margin-right: 5px;
+
+        }
+        .features-box{
+            box-shadow:  0 0 10px 1px rgba(37,73,214,0.18);
+            margin-bottom: 30px;
+        }
+        .gallery{
+            padding: 100px 0;
+            background: lightgrey;
+        }
+        .gallery-box img{
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .gallery-box img:hover{
+            transform: scale(1.5);
+        }
+        .gallery-box h4{
+           display: block;
+            color: white;
+            text-shadow: tomato;
+            font-weight: 600;
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .gallery-box{
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .banner{
+            height: 80%;
+            background-image: url(bali.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            padding-top: 15%;
+        }
+        .banner-highlights{
+            padding: 70px 0;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            color:white;
+           
+        }
+        .booking-btn{
+            width: 120px;
+            padding: 8px 0;
+            outline: none;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            background: transparent;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .users-feedback{
+            padding: 100px 0;
+        }
+        .user-review{
+            text-align: center;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+            padding-bottom: 50px;
+        }
+        .user-review p{
+            padding: 50px 10px 10px 10px;
+        }
+        .users-feedback img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: relative;
+            margin: -30px 0 20px 40%;
+        }
+        .user-review p::before{
+            content: '\201d';
+            display: block;
+            position: absolute;
+            font-size: 100px;
+            color: royalblue;
+            font-family: sans-serif;
+            left: 44%;
+            top: -20px;
+        }
+        .footer{
+          padding: 100px 20px 15px;
+          background-image: linear-gradient(#2d557d,#9610fd);
+          color: white;
+        }
+        .footer-logo{
+            width: 100px;
+            margin-top: 5px;
+            margin-bottom: 5x;
+        }
+        .footer h4{
+            text-align: left;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        .footer p{
+            font-size: 12px;
+            text-align: justify;
+            padding-right: 35px;
+        }
+        .footer .row .fa{
+            padding-right: 20px;
+            font-size: 15px;
+        }
+        .footer hr{
+            margin-top: 10px;
+            background: lightgrey;
+        }
+        .fa-heart{
+            margin: 0 5px;
+            color: red;
+        }
+        .footer .copyright{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="header">
+        <div class="container">
+         <button translate="button" class="login_btn">Login</button>
+        </div>
+<h1>Travels Acress The Globe</h1>
+<p>“Travel brings power and love back into your life.”</p>
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="Search Country or City">
+<div class="input-group-append">
+    <button type="Submit" class="input-group-text btn">Search</button>
+</div>
+</div>
+    </section>
+    <section class="features">
+        <h1>Features Destination</h1>
+  <div class="container">
+<div class="row">
+    <div class="col-md-4">
+    <div class="features-box">
+<div class="features-img">
+    <img src="london.jpg">
+    <div class="prize">
+   <p>80$</p>
+    </div>
+    <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i> 
+    </div>
+</div>
+    <div class="feature-details">
+        <h4>LONDON</h4>
+        <p>In 2017, we took an exciting and scary step. 
+            We decided to turn our travel blog from a hobby into our full-time job. 
+            We would’ve had so much regret if we didn’t take this opportunity. 
+            Now, each of these travel quotes fit the stories we’ve made.</p>
+            <div>
+                <span> <i class="fa fa map-marker"></i> Los Angeles</span>
+                <span> <i class="fa fa-sun-o"></i>4 Days</span>
+                <span> <i class="fa fa-moon-o"></i>3 Nights</span>
+
+            </div>
+    </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="features-box">
+        <div class="features-img">
+            <img src="singapore.jpg">
+            <div class="prize">
+           <p>85$</p>
+            </div>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i> 
+            </div>
+        </div>
+            <div class="feature-details">
+                <h4>SINGHAPUR</h4>
+                <p>In 2017, we took an exciting and scary step. 
+                    We decided to turn our travel blog from a hobby into our full-time job. 
+                    We would’ve had so much regret if we didn’t take this opportunity. 
+                    Now, each of these travel quotes fit the stories we’ve made.</p>
+                    <div>
+                        <span> <i class="fa fa map-marker"></i> Los Angeles</span>
+                        <span> <i class="fa fa-sun-o"></i>4 Days</span>
+                        <span> <i class="fa fa-moon-o"></i>3 Nights</span>
+        
+                    </div>
+            </div>
+            </div>
+</div>
+<div class="col-md-4">
+    <div class="features-box">
+        <div class="features-img">
+            <img src="paris.jpg">
+            <div class="prize">
+           <p>90$</p>
+            </div>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i> 
+            </div>
+        </div>
+            <div class="feature-details">
+                <h4>PARIS</h4>
+                <p>In 2017, we took an exciting and scary step. 
+                    We decided to turn our travel blog from a hobby into our full-time job. 
+                    We would’ve had so much regret if we didn’t take this opportunity. 
+                    Now, each of these travel quotes fit the stories we’ve made.</p>
+                    <div>
+                        <span> <i class="fa fa map-marker"></i> Los Angeles</span>
+                        <span> <i class="fa fa-sun-o"></i>4 Days</span>
+                        <span> <i class="fa fa-moon-o"></i>3 Nights</span>
+        
+                    </div>
+            </div>
+            </div>
+</div>
+</div>
+  </div>
+    </section>
+    <section class="gallery">
+         <h1>Travelling Gallery</h1>
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="gallery-box">
+                     <img src="n1.jfif" alt="img">
+                     <h4>Los Angeles</h4>
+                 </div>
+             </div>
+<div class="col-md-3">
+  <div class="gallery-box">
+        <img src="n2.jfif" alt="img">
+        <h4>Los Angeles</h4>
+        </div>
+    </div>
+
+<div class="col-md-3">
+        <div class="gallery-box">
+        <img src="n5.jfif" alt="img">
+        <h4>Los Angeles</h4>
+     </div>
+ </div>
+    
+ <div class="col-md-3">
+        <div class="gallery-box">
+        <img src="n4.jfif" alt="img">
+        <h4>Los Angeles</h4>
+         </div>
+             </div>
+             </div> 
+             </div> 
+    </section>
+   <section class="banner">
+        <div class="banner-highlights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Get 30% On Top Destination</h2>
+                        <p>Book your tickets before 31st march and avail 30% flat discount </p>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="booking-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+   <section class="users-feedback">
+       <h1>Users Review</h1>
+       <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="user-review">
+                      <p>Our Africa travel specialist planned the most amazing trip to Kenya for us.
+                           We had an incredible time and were able to capture so many awesome pictures. 
+                           We are already thinking about when to go back! 
+                          The Giraffe Manor was one of the coolest experiences and the safari experience is unreal
+                        </p>
+                        <h5>Anand Shirbhaiyye</h5>
+                        <small>Los Angeles</small>
+                    </div>
+                 <img src="pppppp.jpg">
+              </div>
+              <div class="col-md-4">
+                <div class="user-review">
+                    <p>Our Africa travel specialist planned the most amazing trip to Kenya for us.
+                         We had an incredible time and were able to capture so many awesome pictures. 
+                         We are already thinking about when to go back! 
+                        The Giraffe Manor was one of the coolest experiences and the safari experience is unreal
+                      </p>
+                      <h5>Ankit Khapre</h5>
+                      <small>Los Angeles</small>
+                  </div>
+               <img src="pppppp.jpg">
+              </div>
+             <div class="col-md-4">
+                <div class="user-review">
+                    <p>Our Africa travel specialist planned the most amazing trip to Kenya for us.
+                         We had an incredible time and were able to capture so many awesome pictures. 
+                         We are already thinking about when to go back! 
+                        The Giraffe Manor was one of the coolest experiences and the safari experience is unreal
+                      </p>
+                      <h5>Abhishek Kamble</h5>
+                      <small>Los Angeles</small>
+                  </div>
+               <img src="pppppp.jpg">
+             </div>
+              </div>
+             </div>
+   </section>
+   <section class="footer">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-3">
+                   <img src="rwww.jpg" class="footer-logo">
+                   We decided to turn our travel blog from a hobby into our full-time job. 
+                   We would’ve had so much regret if we didn’t take this opportunity. 
+                   Now, each of these travel quotes fit the stories we’ve made
+               </div>
+               <div class="col-md-3">
+                   <h4>Features</h4>
+                   <p>Deals & Offers</p>
+                   <p>Customer Reviews</p>
+                   <p>Customer Policy</p>
+               </div>
+               <div class="col-md-3">
+                <h4>Quick Contact</h4>
+                <p> <i class="fa fa-phone-square"></i>+91 123456789</p>
+                <p> <i class="fa fa-envelope"></i>hello@gmail.com9</p>
+                <p> <i class="fa fa-home"></i>kothrud Depo,pune</p>
+               </div>
+               <div class="col-md-3">
+                <h4>Follow Us On</h4>
+                <p> <i class="fa fa-facebook-official"></i>Facebook</p>
+                <p> <i class="fa fa-youtube-play"></i>youtube</p>
+                <p> <i class="fa fa-twitter"></i>Twitter</p>
+               </div>
+           </div> <hr>
+           <p class="copyright"> Made with<i class="fa fa-heart"></i>Thankyou So Much for visiting this
+        website... </p>
+           
+       </div>
+   </section>
+</body>
+</html>
